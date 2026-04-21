@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "buyerId",
+    "registeredAt",
+    "firstName",
+    "lastName",
+    "email",
+    "phone",
+    "preferences"
+  ],
+  "properties": {
+    "buyerId": {
+      "type": "string"
+    },
+    "registeredAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^\\+?[0-9]{8,15}$"
+    },
+    "preferences": {
+      "type": "object",
+      "required": [
+        "preferredBrands",
+        "maxBudget",
+        "fuelType"
+      ],
+      "properties": {
+        "preferredBrands": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "maxBudget": {
+          "type": "number",
+          "minimum": 0
+        },
+        "fuelType": {
+          "type": "string",
+          "enum": ["DIESEL", "PETROL", "ELECTRIC", "HYBRID"]
+        }
+      }
+    }
+  }
+}

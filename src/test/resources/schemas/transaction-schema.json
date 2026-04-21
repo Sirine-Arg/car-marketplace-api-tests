@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "transactionId",
+    "listingId",
+    "buyerId",
+    "paymentMethod",
+    "amount",
+    "currency",
+    "status",
+    "purchaseDate"
+  ],
+  "properties": {
+    "transactionId": {
+      "type": "string"
+    },
+    "listingId": {
+      "type": "string"
+    },
+    "buyerId": {
+      "type": "string"
+    },
+    "paymentMethod": {
+      "type": "string",
+      "enum": ["BANK_TRANSFER", "CREDIT_CARD", "PAYPAL", "CASH"]
+    },
+    "amount": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["PENDING", "COMPLETED", "FAILED", "CANCELLED"]
+    },
+    "purchaseDate": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
