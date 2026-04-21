@@ -33,7 +33,7 @@ This project is an automated testing framework for a **Car Marketplace REST API*
 │       │       ├── runners
 │       │       ├── services
 │       │       ├── stepdefinitions
-│       │       └── utils
+│       │       └── utils                      
 │       │
 │       └── resources
 │           ├── config

@@ -2,7 +2,7 @@ name: API Tests - Car Marketplace
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
 
 jobs:
